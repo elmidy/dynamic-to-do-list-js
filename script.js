@@ -3,14 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const taskInput = document.getElementById("task-input");
   const taskList = document.getElementById("task-list");
 
-  addButton.addEventListener("click", addTask);
-
-  taskInput.addEventListener("keypress", function (e) {
-    if (e.key === "Enter") {
-      addTask();
-    }
-  });
-
   function addTask() {
     const taskText = taskInput.value.trim();
     if (taskText === "") {
@@ -31,4 +23,12 @@ document.addEventListener("DOMContentLoaded", function () {
       taskInput.value = "";
     }
   }
+
+  addButton.addEventListener("click", addTask);
+
+  taskInput.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      addTask();
+    }
+  });
 });
